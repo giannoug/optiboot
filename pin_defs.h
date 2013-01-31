@@ -44,7 +44,7 @@
 #endif
 
 /* Sanguino support */
-#if defined(__AVR_ATmega644P__) || defined(__AVR_ATmega1284P__)
+#if defined(__AVR_ATmega644P__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega644__)
 /* Onboard LED is connected to pin PB0 on Sanguino */ 
 #define LED_DDR     DDRB
 #define LED_PORT    PORTB
