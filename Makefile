@@ -34,16 +34,16 @@ PROGRAM    = optiboot
 #
 # These are the parameters for a usb-based STK500v2 programmer.
 # Exact type unknown.  (historical Makefile values.)
-ISPTOOL	   = stk500v2
-ISPPORT	   =  usb
-ISPSPEED   = -b 115200
+#ISPTOOL	   = stk500v2
+#ISPPORT	   =  usb
+#ISPSPEED   = -b 115200
 #
 #
 # These are parameters for using an Arduino with the ArduinoISP sketch
 #  as the programmer.  On a mac, for a particular Uno as programmer.
-#ISPTOOL	= stk500v1 -C /Applications/arduino/arduino-0022/hardware/tools/avr/etc/avrdude.conf
-#ISPPORT	= /dev/tty.usbmodemfd3141 
-#ISPSPEED	= -b19200
+ISPTOOL	= avrisp
+ISPPORT	= COM8
+ISPSPEED	= -b 19200
 
 MCU_TARGET = atmega168
 LDSECTIONS  = -Wl,--section-start=.text=0x3e00 -Wl,--section-start=.version=0x3ffe
