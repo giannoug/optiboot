@@ -303,12 +303,18 @@ void appStart(uint8_t rstFlags) __attribute__ ((naked));
 #elif defined(__AVR_ATmega328P__)
 #define RAMSTART (0x100)
 #define NRWWSTART (0x7000)
-#elif defined (__AVR_ATmega644P__) || defined (__AVR_ATmega644__)
+#elif defined (__AVR_ATmega644P__)
 #define RAMSTART (0x100)
 #define NRWWSTART (0xE000)
 // correct for a bug in avr-libc
 #undef SIGNATURE_2
 #define SIGNATURE_2 0x0A
+#elif defined (__AVR_ATmega644__)
+#define RAMSTART (0x100)
+#define NRWWSTART (0xE000)
+// correct for a bug in avr-libc
+#undef SIGNATURE_2
+#define SIGNATURE_2 0x09
 #elif defined (__AVR_ATmega1284P__)
 #define RAMSTART (0x100)
 #define NRWWSTART (0xE000)
