@@ -451,7 +451,7 @@ luminet_isp: isp
 #
 atmega644: TARGET = atmega644
 atmega644: MCU_TARGET = atmega644
-atmega644: CFLAGS += '-DLED_START_FLASHES=3' '-DBAUD_RATE=115200' '-DBIGBOOT'
+atmega644: CFLAGS += '-DBAUD_RATE=115200' '-DBIGBOOT'
 atmega644: AVR_FREQ = 16000000L
 atmega644: LDSECTIONS  = -Wl,--section-start=.text=0xfc00 -Wl,--section-start=.version=0xfffe
 atmega644: $(PROGRAM)_atmega644.hex
